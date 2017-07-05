@@ -1,0 +1,48 @@
+<?php
+
+/**
+ *
+ * Twig Converter. An extension for the phpBB Forum Software package.
+ *
+ * @copyright (c) 2017, kasimi, https://kasimi.net
+ * Nederlandse vertaling @ Solidjeuh <https://www.froddelpower.be>
+ * @license GNU General Public License, version 2 (GPL-2.0)
+ *
+ */
+
+if (!defined('IN_PHPBB'))
+{
+	exit;
+}
+
+if (empty($lang) || !is_array($lang))
+{
+	$lang = array();
+}
+
+// DEVELOPERS PLEASE NOTE
+//
+// All language files should use UTF-8 as their encoding and the files must not contain a BOM.
+//
+// Placeholders can now contain order information, e.g. instead of
+// 'Page %s of %s' you can (and should) write 'Page %1$s of %2$s', this allows
+// translators to re-order the output of data while ensuring it remains correct
+//
+// You do not need this where single placeholders are used, e.g. 'Message %d' is fine
+// equally where a string contains only two placeholders which are used to wrap text
+// in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
+//
+// Some characters for use
+// ’ » “ ” …
+
+$lang = array_merge($lang, array(
+	'TWIGCONVERTER_SELECT'						=> 'Converteer template bestanden',
+	'TWIGCONVERTER_SELECT_EXPLAIN'				=> 'Selecteer een extensie of een stijl om de templates om te zetten in Twig-syntaxis. Een zip-bestand wordt gedownload en ook opgeslagen in de store folder van het forum.',
+	'TWIGCONVERTER_SELECT_EXT'					=> 'Selecteer extensie of stijl',
+	'TWIGCONVERTER_EXT'							=> 'Extensie: %s',
+	'TWIGCONVERTER_STYLE'						=> 'Stijl: %s',
+
+	'TWIGCONVERTER_ERROR_NO_TEMPLATE_FILES'		=> 'De geselecteerde folder bevat geen templates.',
+	'TWIGCONVERTER_ERROR_WRITEABLE'				=> 'De bestemming folder is niet beschrijfbaar.',
+	'TWIGCONVERTER_ERROR_ZIP'					=> 'Kan ZIP-bestand niet maken.',
+));
